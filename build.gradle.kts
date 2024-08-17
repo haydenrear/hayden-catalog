@@ -17,6 +17,7 @@ catalog {
         library("springDependencyManagement", "io.spring.gradle:dependency-management-plugin:1.1.4")
         library("kotlinGradle", "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
         library("vertexAi", "com.google.cloud:google-cloud-vertexai:1.5.0")
+        library("aspectJWeaver", "org.aspectj:aspectjweaver:1.9.7")
     }
 }
 
