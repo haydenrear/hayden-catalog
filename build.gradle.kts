@@ -19,7 +19,7 @@ catalog {
     versionCatalog {
         library("netflixDgsLib", "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:6.0.3")
         library("springBoot", "org.springframework.boot:spring-boot-gradle-plugin:${property("springBootVersion")}")
-        library("springDependencyManagement", "io.spring.gradle:dependency-management-plugin:1.1.4")
+        library("springDependencyManagement", "io.spring.gradle:dependency-management-plugin:1.1.6")
         library("kotlinGradle", "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
 
         library("aspectJWeaver", "org.aspectj:aspectjweaver:1.9.7")
