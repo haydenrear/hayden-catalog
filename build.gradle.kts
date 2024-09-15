@@ -38,9 +38,9 @@ catalog {
         library("bcPkix", "org.bouncycastle:bcpkix-jdk18on:1.76")
         bundle("bc", mutableListOf("bcProvider", "bcTls", "bcPkix"))
 
-        library("dgsCodegenCore","com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:6.1.4")
-        library("dgsMocking", "com.netflix.graphql.dgs:graphql-dgs-mocking:8.2.5")
-        library("dgsApolloFederation", "com.apollographql.federation:federation-graphql-java-support:2.1.0")
+        library("dgsCodegenCore","com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:6.3.0")
+        library("dgsMocking", "com.netflix.graphql.dgs:graphql-dgs-mocking:9.1.1")
+        library("dgsApolloFederation", "com.apollographql.federation:federation-graphql-java-support:5.0.0")
         bundle("dgs", mutableListOf("dgsCodegenCore", "dgsMocking", "dgsApolloFederation"))
 
 
