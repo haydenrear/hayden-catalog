@@ -13,11 +13,11 @@ repositories {
 project.ext["springCloudVersion"] = "2023.0.3"
 project.ext["springBootVersion"] = "3.3.3"
 project.ext["springIntegrationVersion"] = "6.2.1"
-project.ext["openTelemetryVersion"] = "1.35.0"
+project.ext["openTelemetryVersion"] = "1.42.1"
 
 catalog {
     versionCatalog {
-        library("netflixDgsLib", "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:6.0.3")
+        library("netflixDgsLib", "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-gradle:6.4.0-SNAPSHOT")
         library("springBoot", "org.springframework.boot:spring-boot-gradle-plugin:${property("springBootVersion")}")
         library("springDependencyManagement", "io.spring.gradle:dependency-management-plugin:1.1.6")
         library("kotlinGradle", "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
@@ -38,22 +38,23 @@ catalog {
         library("bcPkix", "org.bouncycastle:bcpkix-jdk18on:1.76")
         bundle("bc", mutableListOf("bcProvider", "bcTls", "bcPkix"))
 
-        library("dgsCodegenCore","com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:6.3.0")
+        library("dgsCodegenCore","com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-core:6.4.0-SNAPSHOT")
+        library("dgsCodegenCoreShared","com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:6.4.0-SNAPSHOT")
         library("dgsMocking", "com.netflix.graphql.dgs:graphql-dgs-mocking:9.1.1")
         library("dgsApolloFederation", "com.apollographql.federation:federation-graphql-java-support:5.0.0")
-        bundle("dgs", mutableListOf("dgsCodegenCore", "dgsMocking", "dgsApolloFederation"))
+        bundle("dgs", mutableListOf("dgsCodegenCore", "dgsMocking", "dgsApolloFederation", "dgsCodegenCoreShared"))
 
 
         library("droolsEngine", "org.drools:drools-engine:8.44.0.Final")
         library("droolsMvel", "org.drools:drools-mvel:8.44.0.Final")
         bundle("drools", mutableListOf("droolsEngine", "droolsMvel"))
 
-        library("opentelemtrySemConv", "io.opentelemetry.semconv:opentelemetry-semconv:1.23.1-alpha")
-        library("opentelemtryLogback", "io.opentelemetry.instrumentation:opentelemetry-logback-appender-1.0:2.1.0-alpha")
-        library("opentelemtryInstrumentationApi", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:2.1.0")
-        library("opentelemtrySpringBootStarter", "io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:1.22.1-alpha")
-        library("opentelemtryAnnotations", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.1.0")
-        library("opentelemtryJdbc", "io.opentelemetry.instrumentation:opentelemetry-jdbc:2.1.0-alpha")
+        library("opentelemtrySemConv", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:1.33.6-alpha")
+        library("opentelemtryLogback", "io.opentelemetry.instrumentation:opentelemetry-logback-appender:2.8.0-alpha")
+        library("opentelemtryInstrumentationApi", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:2.8.0")
+        library("opentelemtrySpringBootStarter", "io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:2.8.0")
+        library("opentelemtryAnnotations", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.8.0")
+        library("opentelemtryJdbc", "io.opentelemetry.instrumentation:opentelemetry-jdbc:2.8.0-alpha")
         bundle("opentelemetry", mutableListOf(
             "opentelemtrySemConv", "opentelemtryLogback", "opentelemtryInstrumentationApi",
             "opentelemtrySpringBootStarter", "opentelemtryAnnotations", "opentelemtryJdbc"
