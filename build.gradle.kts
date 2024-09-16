@@ -24,7 +24,7 @@ catalog {
 
         library("aspectJWeaver", "org.aspectj:aspectjweaver:1.9.7")
 
-        library("vertexAi", "com.google.cloud:google-cloud-vertexai:1.5.0")
+//        library("vertexAi", "com.google.cloud:google-cloud-vertexai:1.9.0")
 
         library("dglPytorchJni", "ai.djl.pytorch:pytorch-jni:2.0.1-0.25.0")
         library("dglPytorchEngine", "ai.djl.pytorch:pytorch-engine:0.25.0")
@@ -50,7 +50,7 @@ catalog {
         bundle("drools", mutableListOf("droolsEngine", "droolsMvel"))
 
         library("opentelemtrySemConv", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api-semconv:1.33.6-alpha")
-        library("opentelemtryLogback", "io.opentelemetry.instrumentation:opentelemetry-logback-appender:2.8.0-alpha")
+        library("opentelemtryLogback", "io.opentelemetry.instrumentation:opentelemetry-logback-appender-1.0:2.8.0-alpha")
         library("opentelemtryInstrumentationApi", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-api:2.8.0")
         library("opentelemtrySpringBootStarter", "io.opentelemetry.instrumentation:opentelemetry-spring-boot-starter:2.8.0")
         library("opentelemtryAnnotations", "io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:2.8.0")
